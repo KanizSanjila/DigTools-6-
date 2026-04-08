@@ -8,6 +8,7 @@ import { Suspense, useState } from 'react'
 import Steps from './components/Steps/Steps'
 import Pricing from './components/Pricing/Pricing'
 import Ready from './components/Ready/Ready '
+import { ToastContainer } from 'react-toastify'
 
 const fetchData = async() =>{
   const res = await fetch('/Cards.json')
@@ -44,6 +45,7 @@ function App() {
     </Suspense>
    <Ready></Ready>
      <Footer></Footer>
+      <ToastContainer />
     </>
   )
 }

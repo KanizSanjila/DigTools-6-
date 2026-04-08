@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const Card = ({person,count,setCount}) => {
+const Card = ({person,count,setCount,cart,setCart}) => {
     const [isSelected,setIsSelected] = useState(false);
     // console.log(person)
     return (
@@ -34,9 +35,11 @@ const Card = ({person,count,setCount}) => {
     </ul>
     <div className="mt-6">
       <button className="btn w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white border-none px-6 rounded-full" onClick={()=>{
-        setIsSelected(true),
+        setIsSelected(true)
         setCount(count+1)
-      }} disabled={isSelected ?true : false}>{isSelected===true ?"Added to cart":"Buy Now"}</button>
+        toast("Added to cart!")
+        setCart([...cart,person])
+      }} disabled={isSelected ? true : false}>{isSelected===true ?"Added to cart":"Buy Now"}</button>
     </div>
   </div>
 </div>
