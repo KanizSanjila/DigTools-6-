@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Card = ({person}) => {
-    console.log(person)
+const Card = ({person,count,setCount}) => {
+    const [isSelected,setIsSelected] = useState(false);
+    // console.log(person)
     return (
         <div className="card w-96 bg-base-100 shadow-sm">
                <div className='flex justify-between'>
@@ -32,7 +33,10 @@ const Card = ({person}) => {
       </li>
     </ul>
     <div className="mt-6">
-      <button className="btn w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white border-none px-6 rounded-full">Buy Now</button>
+      <button className="btn w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white border-none px-6 rounded-full" onClick={()=>{
+        setIsSelected(true),
+        setCount(count+1)
+      }} disabled={isSelected ?true : false}>{isSelected===true ?"Added to cart":"Buy Now"}</button>
     </div>
   </div>
 </div>

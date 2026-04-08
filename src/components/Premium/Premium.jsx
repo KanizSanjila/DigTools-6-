@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { use } from 'react';
 import Cards from './Cards';
+import Cart from '../Cart';
 
-const Premium = ({dataPromise}) => {
+const Premium = ({dataPromise,count,setCount}) => {
     const data= use(dataPromise);
+    const[selected,setSelected] = useState('Products')
+
     return (
         <div className='mt-10'>
           <div  className=' text-center'>
@@ -11,10 +14,15 @@ const Premium = ({dataPromise}) => {
            <p className='text-[#627382]'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
           </div>
             <div className='text-center'>
-                <button className="btn bg-[#E7FE29]rounded-r-none rounded-l-2xl">Available</button>
-                <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA]  rounded-l-none rounded-r-2xl">Selected </button>
+                <button onClick={()=> setSelected('Products')} className={`btn  ${selected === 'Products' ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white':''} rounded-2xl`}>Products</button>
+                <button onClick={()=> setSelected('Cart')} className={`btn  ${selected === 'Cart' ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white':''} rounded-2xl`}>Cart({count})</button>
               </div>
-              <Cards data={data}></Cards>
+              <div>
+                {
+                    selected === "Products" ? <Cards data={data} count={count} setCount={setCount}></Cards> : <Cart data={data}></Cart>
+                }
+              </div>
+              {/* <Cards data={data}></Cards> */}
         </div>
     );
 };

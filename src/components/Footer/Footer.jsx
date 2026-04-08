@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#0B0D17] text-gray-400 py-16 mt-20 mb-0">
+        <footer className="bg-[#0B0D17] text-gray-400 py-16 mb-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           
