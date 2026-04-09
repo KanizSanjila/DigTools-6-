@@ -1,9 +1,12 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const AllCart = ({cat}) => {
-    // console.log(cat) 
+const AllCart = ({cat,setCart,}) => { 
     const handelDelete = (cat)=>{
          console.log(cat) 
+    //       const remaining = cat.filter((item) => item.name !== cat);
+    // setCart(remaining);
+    // toast.error("Item removed from cart");
     }
     return (
          <div className='w-11/12 mx-auto bg-[#FFFFFF] shadow-2xl rounded-3xl my-8 p-10'>

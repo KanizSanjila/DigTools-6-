@@ -24,7 +24,7 @@ const Steps = ({stepPromise}) => {
 
               {/* Icon Container */}
               <div className="w-20 h-20 bg-purple-50 text-[#4F39F6] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-[#4F39F6] group-hover:text-white transition-colors duration-300">
-                {step.img}
+                <img src={step.img} alt="" />
               </div>
 
               <h3 className="text-xl font-bold text-slate-900 mb-4">{step.title}</h3>

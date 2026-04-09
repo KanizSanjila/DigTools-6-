@@ -20,7 +20,7 @@ const Premium = ({dataPromise,count,setCount}) => {
               </div>
               <div>
                 {
-                    selected === "Products" ? <Cards data={data} count={count} setCount={setCount} cart={cart} setCart={setCart}></Cards> : <Cart data={data} cart={cart}></Cart>
+                    selected === "Products" ? <Cards data={data} count={count} setCount={setCount} cart={cart} setCart={setCart}></Cards> : <Cart data={data} cart={cart} setCart={setCart} selected={selected} setSelected={setSelected}></Cart>
                 }
               </div>
               {/* <Cards data={data}></Cards> */}
