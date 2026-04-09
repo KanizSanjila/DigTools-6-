@@ -1,16 +1,18 @@
-# React + Vite
+# 1.Name of My Project:
+DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 2.A little Description:
+DigiTools is a modern and responsive web application built with React.js that provides digital tools and product management features. It offers a smooth user experience with dynamic UI, interactive components, and real-time notifications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# 3.Technology that you use:
+* 1.Technologies Used
+* 2.React.js
+* 3.Tailwind CSS and DaisyUI
+* 4.JavaScript (ES6+)
+* 5.React-Toastify (NPM Package) and JSON (for product data)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 3.Features about your project
+* Dynamic Cart System Add/remove items from cart Real-time cart update Cart item counter 
+* Toast Notifications Instant feedback using React-Toastify Success, warning, and error alerts Improved user interaction.
+* Fully Responsive Design Mobile-friendly navigation Smooth responsive layout Modern UI with Tailwind + DaisyUI 

@@ -4,18 +4,25 @@ import { toast } from 'react-toastify';
 const Card = ({person,count,setCount,cart,setCart}) => {
     const [isSelected,setIsSelected] = useState(false);
     // console.log(person)
+    const tagColors = {
+    "Best Seller": "bg-[#FFD700]/20 text-[#D4AF37]", 
+    "Popular": "bg-[#4F39F6]/10 text-[#4F39F6]",     
+    "New": "bg-[#00B894]/10 text-[#00B894]",        
+};
     return (
-        <div className="card w-96 bg-base-100 shadow-sm">
+        <div className="card w-96 bg-base-100 shadow-sm p-4">
                <div className='flex justify-between'>
                 <img src={person.image} alt="" />
-                  <span className="badge badge-xs badge-warning ">{person.tag}</span>
+                 <span className={`badge border-none font-semibold px-3 py-2 ${tagColors[person.tag] || 'bg-gray-100 text-gray-600'}`}>
+    {person.tag}
+</span>
                </div>
                
   <div className="card-body">
    
    <img src="image" alt="" />
     <div className="">
-      <h2 className="text-3xl font-bold">{person.name}</h2>
+      <h2 className="text-3xl font-bold whitespace-nowrap">{person.name}</h2>
       <p>{person.description}</p>
       <span className="text-xl  "><label className='font-bold'>${person.price}</label>{person.billing}</span>
     </div>
